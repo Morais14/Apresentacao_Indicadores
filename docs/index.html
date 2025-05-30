@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt"><head>
+<script src="apresentacao_indicadores_orcamento_files/libs/clipboard/clipboard.min.js"></script>
+<script src="apresentacao_indicadores_orcamento_files/libs/quarto-html/tabby.min.js"></script>
+<script src="apresentacao_indicadores_orcamento_files/libs/quarto-html/popper.min.js"></script>
+<script src="apresentacao_indicadores_orcamento_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="apresentacao_indicadores_orcamento_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="apresentacao_indicadores_orcamento_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="apresentacao_indicadores_orcamento_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
+
+  <meta name="author" content="Coordenação Geral de Planejamento - CGPL">
+  <title>Indicadores de Gestão</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="apresentacao_indicadores_orcamento_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="apresentacao_indicadores_orcamento_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="apresentacao_indicadores_orcamento_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="apresentacao_indicadores_orcamento_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/viz-1.8.2/viz.js"></script>
+
+  <link href="apresentacao_indicadores_orcamento_files/libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/grViz-binding-1.0.11/grViz.js"></script>
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/typedarray-0.1/typedarray.min.js"></script>
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/jquery-3.5.1/jquery.min.js"></script>
+
+  <link href="apresentacao_indicadores_orcamento_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+  <link href="apresentacao_indicadores_orcamento_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="title-slide-custom center" data-background-image="www/fundos apresentação_corpo.png" data-background-position="center" data-background-size="cover">
+  <h1 class="title">Indicadores de Gestão</h1>
+  <p class="subtitle">Entendendo as métricas que impactam o orçamento</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Coordenação Geral de Planejamento - CGPL 
+</div>
+</div>
+</div>
+
+  <p class="date">30/05/2025</p>
+</section>
+<section id="introdução" class="slide level2">
+<h2>Introdução</h2>
+
+<img data-src="www/introducao.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="composição-da-matriz-orçamentária" class="slide level2">
+<h2>Composição da Matriz Orçamentária</h2>
+<p><br></p>
+
+<img data-src="apresentacao_indicadores_orcamento_files/figure-revealjs/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center r-stretch" style="border: none; display:block; margin:auto;" width="960"></section>
+<section id="pnp-na-composição-da-matriz-orçamentária" class="slide level2">
+<h2>PNP na Composição da Matriz Orçamentária</h2>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-cf16ba891f8ede9ba0a8" style="width:100%;height:95%;"></div>
+<script type="application/json" data-for="htmlwidget-cf16ba891f8ede9ba0a8">{"x":{"diagram":" digraph infographic {\n  # --- Atributos Globais do Gráfico ---\n  graph [\n    layout = dot,         // Algoritmo de layout hierárquico\n    rankdir = TB,         // Direção do layout (Top to Bottom - Cima para Baixo)\n    fontsize = 10,        // Tamanho da fonte padrão\n    bgcolor = transparent, // Fundo transparente\n    fontname = \"Open Sans\", // Fonte para o gráfico inteiro\n    nodesep = 0.5,        // Espaçamento horizontal entre nós\n    ranksep = 0.7         // Espaçamento vertical entre níveis\n    splines = ortho       // Linhas ortogonais (ângulos retos)\n  ]\n  \n  # --- Atributos Padrão dos Nós (Retângulos) ---\n  node [\n    shape = rectangle,    // Formato do nó\n    style = filled,       // Preencher os nós com cor\n    fontname = \"Open Sans\", // Fonte para o texto do nó\n    fontcolor = white,    // Cor do texto do nó\n    penwidth = 0.5,       // Espessura da borda\n    color = white,        // Cor da borda\n    width = 3.0,          // Largura mínima em polegadas\n    height = 1.2,         // Altura mínima em polegadas\n    margin = \"0.3,0.2\"    // Adiciona espaço ao redor do texto (horizontal,vertical)\n  ]\n  \n  # --- Atributos Padrão das Arestas (Conexões) ---\n  edge [\n    color = \"grey60\",   // Cor das linhas de conexão\n    penwidth = 1.0      // Espessura das linhas\n  ]\n  \n  # --- Definição dos Nós ---\n  \n  # Nível 1\n  n1 [\n    label = \"Qualidade e Eficiência\",\n    fillcolor = \"#4285F4\" // Cor Azul Google\n  ];\n  \n  # Nível 2\n  n2 [\n    label = \"Índice de Eficiência\\nAcadêmica (IEA)\", // Use \"\\n\" para quebra de linha manual\n    fillcolor = \"#F4B400\" // Cor Amarela Google\n  ];\n  n3 [\n    label = \"Relação Aluno Professor\\nPresencial (RAPP)\",\n    fillcolor = \"#F4B400\"\n  ];\n  n4 [\n    label = \"Índice de Atendimento\\naos Marcos Legais\",\n    fillcolor = \"#F4B400\"\n  ];\n  \n  # Nível 3 - Nós com texto mais longo recebem dimensões maiores\n  n5 [\n    label = \"Percentual de Matrículas\\nem Cursos Técnicos\",\n    fillcolor = \"#0F9D58\", // Cor Verde Google\n    width = 3.2,\n    height = 1.3\n  ];\n  n6 [\n    label = \"Percentual de Matrículas em\\nCursos de Formação de Professores\",\n    fillcolor = \"#0F9D58\",\n    width = 3.5,  // Maior largura para este nó\n    height = 1.5  // Maior altura para este nó\n  ];\n  n7 [\n    label = \"Percentual de Matrículas\\nem Cursos Proeja\",\n    fillcolor = \"#0F9D58\",\n    width = 3.2,\n    height = 1.3\n  ];\n  \n  # --- Definição das Arestas (Conexões) ---\n  n1 -> {n2 n3 n4}; // Nó 1 conecta aos nós 2, 3 e 4\n  n4 -> {n5 n6 n7}; // Nó 4 conecta aos nós 5, 6 e 7\n} ","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="pnp-e-orçamento-quanto" class="slide level2">
+<h2>PNP e Orçamento: Quanto?</h2>
+<p><br></p>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="grViz html-widget html-fill-item" id="htmlwidget-c9aaab2c0ce80e2653ee" style="width:100%;height:100%;"></div>
+<script type="application/json" data-for="htmlwidget-c9aaab2c0ce80e2653ee">{"x":{"diagram":"\ndigraph hierarchy {\n  # --- Atributos Globais do Gráfico ---\n  graph [\n    layout = dot,           // Algoritmo de layout hierárquico\n    rankdir = TB,           // Direção do layout (Top to Bottom - Cima para Baixo)\n    fontsize = 12,          // Tamanho da fonte padrão\n    bgcolor = transparent,  // Fundo transparente\n    fontname = \"Open Sans\", // Fonte para o gráfico inteiro\n    nodesep = 0.8,          // Espaçamento horizontal entre nós\n    ranksep = 1.0,          // Espaçamento vertical entre níveis\n    splines = ortho         // Linhas ortogonais (ângulos retos)\n  ]\n  \n  # --- Atributos Padrão dos Nós (Retângulos) ---\n  node [\n    shape = rectangle,      // Formato do nó\n    style = filled,         // Preencher os nós com cor\n    fontname = \"Open Sans\", // Fonte para o texto do nó\n    fontcolor = white,      // Cor do texto do nó\n    penwidth = 1.0,         // Espessura da borda\n    color = white,          // Cor da borda\n    width = 4.0,            // Largura mínima em polegadas\n    height = 1.2,           // Altura mínima em polegadas\n    margin = \"0.3,0.2\"      // Adiciona espaço ao redor do texto (horizontal,vertical)\n  ]\n  \n  # --- Atributos Padrão das Arestas (Conexões) ---\n  edge [\n    color = \"#666666\",     // Cor das linhas de conexão\n    penwidth = 1.5,         // Espessura das linhas\n    arrowsize = 0.8         // Tamanho da seta\n  ]\n  \n  # --- Definição dos Nós ---\n  \n  # Nível 1 - Nó Principal\n  n1 [\n    label = \"Qualidade e Eficiência\\n(10%)\",\n    fillcolor = \"#4285F4\",   // Cor Azul\n    fontsize = 16             // Fonte maior para o nó principal\n  ];\n  \n  # Nível 2 - Nós Secundários\n  n2 [\n    label = \"Índice de Eficiência\\nAcadêmica (IEA)\\n(2,5%)\",\n    fillcolor = \"#F4B400\"    // Cor Amarela\n  ];\n  \n  n3 [\n    label = \"Relação Aluno Professor\\nPresencial (RAPP)\\n(2,5%)\",\n    fillcolor = \"#0F9D58\"    // Cor Verde\n  ];\n  \n  n4 [\n    label = \"Índice de Atendimento\\naos Marcos Legais\\n(5%)\",\n    fillcolor = \"#DB4437\"    // Cor Vermelha\n  ];\n  \n  # --- Definição das Arestas (Conexões) ---\n  n1 -> n2 [label = \"  2,5%  \", fontcolor = \"#666666\", fontname = \"Open Sans\"];\n  n1 -> n3 [label = \"  2,5%  \", fontcolor = \"#666666\", fontname = \"Open Sans\"];\n  n1 -> n4 [label = \"  5%  \", fontcolor = \"#666666\", fontname = \"Open Sans\"];\n  \n  \n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="matrículas-equivalentes" class="slide level2">
+<h2>Matrículas Equivalentes</h2>
+<p><br></p>
+<p><strong><em>Conceito:</em></strong> Matrícula-Equivalente é o aluno matriculado em um determinado curso, ponderado pelo Fator de Equiparação de Carga Horária (FECH) e pelo Fator de Esforço de Curso (FEC).</p>
+<p><br></p>
+<div style="font-size: 75%;">
+<p><span class="math display">\[
+Matrícula Equivalente=(AlunoMatriculado)~X~(FECH)~X~(FEC)
+\]</span></p>
+<p><span class="math display">\[
+FECH=\frac{Carga~Horária~Mínima~Regulamentada}{800~horas}~~se~curso~FIC\\
+~\\
+FECH=1~demais~cursos  
+\]</span></p>
+</div>
+</section>
+<section id="section" class="slide level2" style="overflow-y: hidden !important;" data-background-iframe="timeIFB/timeline.html" data-background-interactive="True">
+<h2></h2>
+</section>
+<section id="contexto-inicial-a-necessidade-da-regulamentação" class="slide level2">
+<h2>Contexto Inicial: A Necessidade da Regulamentação</h2>
+<p><br></p>
+<div style="font-size: 70%;">
+<ul>
+<li class="fragment"><p>A Lei nº 11.892/2008, que instituiu os Institutos Federais e Plano Nacional de Educação (PNE), aprovado pela Lei nº 13.005/2014.</p></li>
+<li class="fragment"><p>Definir o conceito de “aluno-equivalente” para o cálculo das vagas.</p></li>
+<li class="fragment"><p>Harmonizar o cálculo da RAP, considerando os diferentes níveis de ensino e as metas do PNE.</p></li>
+<li class="fragment"><p>Levar em conta as diferentes cargas horárias e demandas de recursos (aulas práticas, laboratórios) dos diversos cursos ofertados na Rede.</p></li>
+</ul>
+</div>
+</section>
+<section id="regulamentação-de-2015-a-2021" class="slide level2">
+<h2>Regulamentação: De 2015 a 2021</h2>
+<p><br></p>
+<div style="font-size: 80%;">
+<ul>
+<li class="fragment"><p>Aluno-Equivalente: Passou de um cálculo que ponderava fortemente a carga horária anual (FECH 2015) para um modelo simplificado onde a carga horária anual só impacta cursos FIC (FECH 2018/2021), transferindo o peso maior para o esforço (FEC) .</p>
+<p><br></p></li>
+<li class="fragment"><p>Fator de Esforço de Curso (FEC): Manteve seu propósito original (ajustar pela demanda prática), mas com um mecanismo formal de revisão periódica. Se tornou o principal fator de ponderação dentro do cálculo de aluno equivalente para a maioria dos cursos.</p></li>
+</ul>
+</div>
+</section>
+<section id="fator-de-esforço-de-curso" class="slide level2">
+<h2>Fator de Esforço de Curso</h2>
+<div class="cell" data-layout-align="center">
+<div id="htmlwidget-12d5abfa1e9cab3c06cb" style="width:1000px;height:610px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12d5abfa1e9cab3c06cb">{"x":{"data":[{"x":[2],"y":[1],"hoverinfo":"y","type":"box","fillcolor":"rgba(66,133,244,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Educação Infantil","legendgroup":"Educação Infantil","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.5],"y":[2],"hoverinfo":"y","type":"box","fillcolor":"rgba(219,68,55,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Ensino Fundamental I","legendgroup":"Ensino Fundamental I","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.0669999999999999],"y":[3],"hoverinfo":"y","type":"box","fillcolor":"rgba(244,180,0,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Ensino Fundamental Ii","legendgroup":"Ensino Fundamental Ii","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.0669999999999999],"y":[4],"hoverinfo":"y","type":"box","fillcolor":"rgba(15,157,88,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Ensino Médio","legendgroup":"Ensino Médio","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.1000000000000001],"y":[5],"hoverinfo":"y","type":"box","fillcolor":"rgba(171,71,188,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Qualificação Profissional (FIC)","legendgroup":"Qualificação Profissional (FIC)","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.0169999999999999,1.5,1.0529999999999999,1.2,1.0489999999999999,1.0980000000000001,1.5,1.117,1.333,1.097,1,1.2,1.2,1.3,1.5,1.02,1,1.2,1.266,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.5,1.1000000000000001,1.2,1,1.5,1.5,1.151,1.1830000000000001,1.1479999999999999,1.1459999999999999,1.1639999999999999,1.1200000000000001,1.3520000000000001,1.3520000000000001,1.3520000000000001,1.27,1.27,1.27,1.3520000000000001,1.3520000000000001,1.27,1.27,1.2470000000000001,1.27,1.2470000000000001,1.081,1.27,1.27,1.105,1.27,1.0289999999999999,1.27,1,1,1,1,1.05,1,1.3,1,1,1,1,1.0089999999999999,1.3,1.3,1.008,1.008,1,1,1,1,1,1.0049999999999999,1,1.002,1,1.014,1,1,1.0029999999999999,1.0029999999999999,1,1,1.194,1.05,1.0529999999999999,1.028,1.028,1,1.032,1.25,1.25,1.083,1.1000000000000001,1.0429999999999999,1.3,1.0660000000000001,1.0680000000000001,1.01,1,1.2130000000000001,1.2,1.0169999999999999,1.022,1,1,1.075,1.1000000000000001,1.1000000000000001,1.131,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1.034,1.0940000000000001,1.1499999999999999,1.2989999999999999,1.2470000000000001,1.1040000000000001,1.1499999999999999,1,1.3,1.3,1.3,1.3,1.1499999999999999,1.0569999999999999,1.5,1,1.25,1.089,1.1499999999999999,1.48,1.2,1.2,1.1819999999999999,1.2,1.008,1.2,1.25,1,1.1000000000000001,1.5,1.0600000000000001,1.028,1.1000000000000001,1,1.2589999999999999,1.1499999999999999,1.5,1.0820000000000001,1.1000000000000001,1.3,1.5,1.083,1.175,1.1970000000000001,1,1.27,1.27,1.27,1.135,1.27,1.214,1.27,1.27,1.27,1,1.03,1.0760000000000001,1.0249999999999999,1.27,1.27,1.109,1.27,1.018,1,1.004,1.016,1.018,1.01,1.2529999999999999,1.2,1,1.1879999999999999,1,1.2,1.073,1,1.0660000000000001,1.2,1,1.0800000000000001,1,1.012,1,1.095,1.006,1.2,1.016,1.0189999999999999,1.113,1.0580000000000001,1.2],"y":[6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,172,193,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Técnico","legendgroup":"Técnico","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1],"y":[7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,112,67,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Especialização Técnica","legendgroup":"Especialização Técnica","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1],"y":[8],"hoverinfo":"y","type":"box","fillcolor":"rgba(120,144,156,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Aperfeiçoamento Tecnológico","legendgroup":"Aperfeiçoamento Tecnológico","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.5,1,1.2,1.1799999999999999,1.2,1,1.006,1.2,1.143,1.1539999999999999,1,1.3600000000000001,1.0880000000000001,1,1.23,1.5,1.23,1,1.27,1.0309999999999999,1.0309999999999999,1.23,1,1,1,1,1,1,1,1,1,1,1,1,1,1.0169999999999999,1,1.03,1.25,1,1.25,1,1.0760000000000001,1.25,1.25,1.0309999999999999,1.0760000000000001,1.0760000000000001,1.2,1.0049999999999999,1.0049999999999999,1.032,1.032,1.1000000000000001,1,1.2,1.3,1.1000000000000001,1.1000000000000001,1.1000000000000001,1,1,1,1,1,1,1,1.0489999999999999,1.0489999999999999,1.1499999999999999,1,1.0169999999999999,1.3,1,1.1499999999999999,1.1499999999999999,1.0780000000000001,1.0780000000000001,1.0780000000000001,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.101,1,1,1.23,1.23,1,1.23,1.23,1.23,1,1.23,1.23,1.23,1.23,1.23,1.23,1.0029999999999999,1.02,1,1,1,1.2,1,1.03,1.2,1.2,1.2,1.2,1.1100000000000001,1.0489999999999999,1.1100000000000001,1,1.1100000000000001,1,1,1.024,1,1.028],"y":[9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9],"hoverinfo":"y","type":"box","fillcolor":"rgba(94,53,177,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Tecnologia","legendgroup":"Tecnologia","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.1000000000000001,1.2390000000000001,1.115,1.052,1,1.127,1,1.137,1,1.038,1,1.0389999999999999,1.0289999999999999,1,1,1,1.024,1.024,1.024,1.175,1.0129999999999999,1.107,1.0640000000000001,1.1200000000000001,1.077,1.079],"y":[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],"hoverinfo":"y","type":"box","fillcolor":"rgba(236,64,122,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Licenciatura","legendgroup":"Licenciatura","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.2,1.2490000000000001,1.5,1.0249999999999999,1.1499999999999999,1.2,1.2,1.1000000000000001,1.3,1.2,1.2509999999999999,1.3,1,1,1.23,1.23,1.1599999999999999,1.2889999999999999,1.137,1.028,1.1080000000000001,1.1080000000000001,1.0780000000000001,1.1779999999999999,1.0329999999999999,1.1000000000000001,1,1.1000000000000001,1,1,1.2,1,1,1.034,1.1000000000000001,1,1,1,1,1,1,1.1000000000000001,1,1.5,1.1000000000000001,1,1.0009999999999999,1,1,1,1.1870000000000001,1.111,1,1,1.081,1.2370000000000001,1,1.1870000000000001,1.1000000000000001,1,1.1000000000000001,1.008,1.071,1.085,1.117,1.085,1.2110000000000001,1.0760000000000001,1.0129999999999999,1.2689999999999999,1.5,1,1.1000000000000001,1,1.23,1.23,1.23,1.111,1.23,1.3180000000000001,1.022,1.0609999999999999,1.026,1,1.052,1,1.137,1.137,1,1.0349999999999999,1.0369999999999999,1.0369999999999999,1.0449999999999999,1.069],"y":[11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11],"hoverinfo":"y","type":"box","fillcolor":"rgba(57,73,171,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Bacharelado","legendgroup":"Bacharelado","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1],"y":[12],"hoverinfo":"y","type":"box","fillcolor":"rgba(102,187,106,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Especialização Lato/Prof Tec","legendgroup":"Especialização Lato/Prof Tec","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1],"y":[13],"hoverinfo":"y","type":"box","fillcolor":"rgba(156,204,101,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Mestrado","legendgroup":"Mestrado","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1],"y":[14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,238,88,0.8)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"Doutorado","legendgroup":"Doutorado","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2],"y":[0.82058077510446314],"text":"Tipo: Educação Infantil <br>Curso: Propedêutico - Educação Infantil-Pré-escola <br>FEC: 2","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(66,133,244,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Educação Infantil","legendgroup":"Educação Infantil","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.5],"y":[1.8308468478731812],"text":"Tipo: Ensino Fundamental I <br>Curso: Propedêutico - Ensino Fundamental- Anos Iniciais <br>FEC: 1.5","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(219,68,55,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Ensino Fundamental I","legendgroup":"Ensino Fundamental I","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.0669999999999999],"y":[2.8823286577127876],"text":"Tipo: Ensino Fundamental Ii <br>Curso: Propedêutico - Ensino Fundamental-Anos finais <br>FEC: 1.067","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(244,180,0,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Ensino Fundamental Ii","legendgroup":"Ensino Fundamental Ii","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.0669999999999999],"y":[3.9912696735933424],"text":"Tipo: Ensino Médio <br>Curso: Propedêutico - Ensino Médio <br>FEC: 1.067","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(15,157,88,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Ensino Médio","legendgroup":"Ensino Médio","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.1000000000000001],"y":[4.9328005764633414],"text":"Tipo: Qualificação Profissional (FIC) <br>Curso: TODOS <br>FEC: 1.1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(171,71,188,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Qualificação Profissional (FIC)","legendgroup":"Qualificação Profissional (FIC)","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.0169999999999999,1.5,1.0529999999999999,1.2,1.0489999999999999,1.0980000000000001,1.5,1.117,1.333,1.097,1,1.2,1.2,1.3,1.5,1.02,1,1.2,1.266,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.5,1.1000000000000001,1.2,1,1.5,1.5,1.151,1.1830000000000001,1.1479999999999999,1.1459999999999999,1.1639999999999999,1.1200000000000001,1.3520000000000001,1.3520000000000001,1.3520000000000001,1.27,1.27,1.27,1.3520000000000001,1.3520000000000001,1.27,1.27,1.2470000000000001,1.27,1.2470000000000001,1.081,1.27,1.27,1.105,1.27,1.0289999999999999,1.27,1,1,1,1,1.05,1,1.3,1,1,1,1,1.0089999999999999,1.3,1.3,1.008,1.008,1,1,1,1,1,1.0049999999999999,1,1.002,1,1.014,1,1,1.0029999999999999,1.0029999999999999,1,1,1.194,1.05,1.0529999999999999,1.028,1.028,1,1.032,1.25,1.25,1.083,1.1000000000000001,1.0429999999999999,1.3,1.0660000000000001,1.0680000000000001,1.01,1,1.2130000000000001,1.2,1.0169999999999999,1.022,1,1,1.075,1.1000000000000001,1.1000000000000001,1.131,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1.034,1.0940000000000001,1.1499999999999999,1.2989999999999999,1.2470000000000001,1.1040000000000001,1.1499999999999999,1,1.3,1.3,1.3,1.3,1.1499999999999999,1.0569999999999999,1.5,1,1.25,1.089,1.1499999999999999,1.48,1.2,1.2,1.1819999999999999,1.2,1.008,1.2,1.25,1,1.1000000000000001,1.5,1.0600000000000001,1.028,1.1000000000000001,1,1.2589999999999999,1.1499999999999999,1.5,1.0820000000000001,1.1000000000000001,1.3,1.5,1.083,1.175,1.1970000000000001,1,1.27,1.27,1.27,1.135,1.27,1.214,1.27,1.27,1.27,1,1.03,1.0760000000000001,1.0249999999999999,1.27,1.27,1.109,1.27,1.018,1,1.004,1.016,1.018,1.01,1.2529999999999999,1.2,1,1.1879999999999999,1,1.2,1.073,1,1.0660000000000001,1.2,1,1.0800000000000001,1,1.012,1,1.095,1.006,1.2,1.016,1.0189999999999999,1.113,1.0580000000000001,1.2],"y":[5.9119392966851594,5.894523803796619,6.1029417252168061,5.8022929302416744,6.1098159043118354,5.9262394938617948,5.9714792991057042,6.0641563535667959,6.0647336357273165,6.0570610191673042,5.8123428640887145,6.089368601515889,5.8295400797389449,5.9169998980127279,6.0113610009662803,5.9205992166884247,5.9080389078706501,6.0978759298101064,5.9590349641628562,6.0731071795336904,5.9530948741361502,5.9334023112431167,6.1625183025375012,6.0235615791752934,5.8868581998161975,6.0755230364389714,6.0517610589973625,5.9321464399807153,6.0223489802330734,6.1223835813812908,6.0914472756907347,5.9445899887010452,6.047782039269805,5.8840081262402233,5.9348015057854351,6.170952269528061,5.8241602391935885,6.1984676893800499,5.8402008055709302,6.0066660451702774,6.1199124419130388,6.1448118042200806,6.1967214894481,6.0564274335280057,6.097533367294818,5.8054427931085231,6.0548151701688768,6.02149768229574,6.0694983607158068,5.9058500576764343,5.9725687637925144,5.8723826534114778,5.8912796394899489,5.9046877296641469,5.9538753290660678,5.8708217403851446,6.0961807466112079,6.0333128561265763,5.9453319602645935,6.1511545197106896,6.0906725105829533,5.8756183728575708,5.8478193867020307,6.1168032919056712,5.9426784650422633,5.8648305793292819,5.8060475106351079,5.904036131221801,6.1802429760806259,6.116738923732191,6.1149459647014739,6.0127302608452737,6.0780260073021051,6.1048149971291421,6.1608242200687524,6.1563715660013258,5.9894280294887725,5.9808040180243554,5.8057452732697126,6.1459450289607052,5.8875391258858141,6.1658389533869924,5.8154621750116346,6.1072327123023573,5.9755866096355019,5.8145528445951644,5.8333106302656237,5.9821647617965938,5.8477969511412082,5.8911044135689732,6.116078550927341,5.8660343456082042,6.1445622081868354,6.1566503114067022,5.8568342509679496,6.1864469698630273,6.0227927283383904,5.9589843882247804,6.1220344031229619,6.1922398704104129,5.9708845843560994,6.1541040930896997,6.130097126681358,5.9675268338061871,6.1547127470374106,6.1104945724830033,5.9325907087884842,6.1106484767049549,5.9712916574440893,5.9123802427202463,5.9340033878572287,6.1407312892377375,5.9286130477674304,6.0064025469124314,5.8824606033973392,6.0961233548820015,5.8313822717405852,6.1779076046310362,6.1360451759770509,6.0668416038155559,5.8012447766959667,5.8422471314668654,5.980619078222662,5.9771102400496599,6.0274255760014057,6.1934065448120235,6.122417398262769,5.9145115912891928,5.8041770576499401,6.1276239420287313,5.8422735568135975,5.9648137154057626,6.0722945771180097,6.0684405650943516,5.9278415128588673,5.8650521887466311,5.9384325930848716,5.9906314376741649,5.9471868033520874,6.1390974108129743,5.9891829418949785,6.0952452629804608,6.0454918301664291,6.0479334357194601,5.8341118457727132,6.1040511288680133,5.9355131745338436,6.1468172708526252,5.834899187553674,6.0688157195225356,5.915047028288245,5.8719710540957752,6.0818956173956398,5.9849934976547958,6.0931965388357643,6.1534838735125961,5.8305331001058223,5.8315026150085032,6.1310029949061571,6.1577342583797874,6.148702232632786,5.9607536171562971,5.8587490832433105,6.138978963252157,5.8487006664276127,6.1471518463455137,6.1207769399508836,6.1334476425312463,6.1604200872592632,6.1247730513103305,6.0042525394819677,6.0223967230878772,5.8758791763335463,5.8134986260905865,5.9492916579358281,6.0070776287466288,5.9533315376378599,5.9658731014467774,6.067486344370991,5.9740360403433446,5.9854828194715086,5.9330541471019389,6.1250132655724885,5.8139385635033252,5.8069253179244695,6.0328157424926756,5.8872888999991115,5.9277519705705348,6.0084314465522768,5.8384539133869113,5.9312841742299494,5.9979901215061542,6.0534145489335058,5.953427673596889,6.12078217016533,5.9896113533526663,5.8719621745869519,5.8697266775183383,5.8558984099887308,6.1912998206913468,6.1972460106015204,5.9328853137791153,6.1889023232273761,5.9383684289641678,6.1877667356282471,6.1343506843782958,6.1773225126788018,6.1116547996178268,5.9217058922164139,6.0423194319941107,6.0914821632206442,5.9115475113503635,6.1537305561825635,5.9598865617066625,5.8999941990710791,5.9838409488089379,5.8427918059751391,5.956541727576405,5.9157103971578184,6.1175915354862811,6.1428483208641413,5.9084445038810376,6.1298289549536999,5.9448674200102687,5.9649530828930439,5.9993079042062165,5.8997680391184986,6.0201993198134005,5.9631418236531317,6.1908994374796746,5.9541364193893971,6.0806428648531439,5.8054359085857872,6.1063477341085672,5.9935952399857344,5.9188793729059395,5.8310291534289718,6.1919992959126828,6.0183434735983612],"text":["Tipo: Técnico <br>Curso: TÉCNICO EM AGENTE COMUNITÁRIO DE SAUDE <br>FEC: 1.017","Tipo: Técnico <br>Curso: TÉCNICO EM ANÁLISES CLÍNICAS <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM BIOTECNOLOGIA <br>FEC: 1.053","Tipo: Técnico <br>Curso: TÉCNICO EM CITOPATOLOGIA <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM CONTROLE AMBIENTAL <br>FEC: 1.049","Tipo: Técnico <br>Curso: TÉCNICO EM CUIDADOS DE IDOSOS <br>FEC: 1.098","Tipo: Técnico <br>Curso: TÉCNICO EM ENFERMAGEM <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM EQUIPAMENTOS BIOMÉDICOS <br>FEC: 1.117","Tipo: Técnico <br>Curso: TÉCNICO EM ESTÉTICA <br>FEC: 1.333","Tipo: Técnico <br>Curso: TÉCNICO EM FARMÁCIA <br>FEC: 1.097","Tipo: Técnico <br>Curso: TÉCNICO EM GERÊNCIA DE SAÚDE <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM HEMOTERAPIA <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM IMAGEM PESSOAL <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM IMOBILIZAÇÕES ORTOPÉDICAS <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM MASSOTERAPIA <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM MEIO AMBIENTE <br>FEC: 1.02","Tipo: Técnico <br>Curso: TÉCNICO EM METEOROLOGIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM NECROPSIA <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM NUTRIÇÃO E DIETÉTICA <br>FEC: 1.266","Tipo: Técnico <br>Curso: TÉCNICO EM ÓPTICA <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM ÓRTESES E PRÓTESES <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM PODOLOGIA <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM PRÓTESE DENTÁRIA <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM RADIOLOGIA <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM REABILITAÇÃO DE DEPENDENTES QUIMICOS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM RECICLAGEM <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM REGISTROS E INFORMAÇÕES EM SAÚDE <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM SAÚDE BUCAL <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM VIGILÂNCIA EM SAÚDE <br>FEC: 1.151","Tipo: Técnico <br>Curso: TÉCNICO EM AUTOMAÇÃO INDUSTRIAL <br>FEC: 1.183","Tipo: Técnico <br>Curso: TÉCNICO EM ELETROELETRÔNICA <br>FEC: 1.148","Tipo: Técnico <br>Curso: TÉCNICO EM ELETROMECÂNICA <br>FEC: 1.146","Tipo: Técnico <br>Curso: TÉCNICO EM ELETRÔNICA <br>FEC: 1.164","Tipo: Técnico <br>Curso: TÉCNICO EM ELETROTÉCNICA <br>FEC: 1.12","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO AUTOMOTIVA <br>FEC: 1.352","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE AERONAVES EM AVIONICOS <br>FEC: 1.352","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE AERONAVES EM CÉLULA <br>FEC: 1.352","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE AERONAVES EM GRUPO MOT... <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE MÁQUINAS INDUSTRIAIS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE MÁQUINAS NAVAIS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO DE SISTEMAS METROFERROVIÁ... <br>FEC: 1.352","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO EM MÁQUINAS PESADAS <br>FEC: 1.352","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO METROFERROVIÁRIA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MÁQUINAS NAVAIS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MECÂNICA <br>FEC: 1.247","Tipo: Técnico <br>Curso: TÉCNICO EM MECÂNICA DE PRECISÃO <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MECATRÔNICA <br>FEC: 1.247","Tipo: Técnico <br>Curso: TÉCNICO EM METALURGIA <br>FEC: 1.081","Tipo: Técnico <br>Curso: TÉCNICO EM METROLOGIA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM PROCESSAMENTO DA MADEIRA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM REFRIGERAÇÃO E CLIMATIZAÇÃO <br>FEC: 1.105","Tipo: Técnico <br>Curso: TÉCNICO EM SISTEMAS A GÁS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM SISTEMAS DE ENERGIA RENOVAVEL <br>FEC: 1.029","Tipo: Técnico <br>Curso: TÉCNICO EM SOLDAGEM <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM ALIMENTAÇÃO ESCOLAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM BIBLIOTECA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM BIBLIOTECONOMIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM INFRAESTRUTURA ESCOLAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM LABORATÓRIO DE CIÊNCIAS DA NATUREZA <br>FEC: 1.05","Tipo: Técnico <br>Curso: TÉCNICO EM LUDOTECA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MATERIAIS DIDÁTICOS BILINGUE (LIBRAS... <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM MULTIMEIOS DIDÁTICOS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ORIENTAÇÃO COMUNITÁRIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM PRODUÇÃO DE MATERIAIS DIDÁTICOS BILI... <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SECRETARIA ESCOLAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM TRADUÇÃO E INTERPRETAÇÃO DE LIBRAS <br>FEC: 1.009","Tipo: Técnico <br>Curso: TÉCNICO EM TREINAMENTO DE CÃES-GUIA <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM TREINAMENTO E INSTRUÇÃO DE CAES-GUIAS <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM ADMINISTRAÇÃO <br>FEC: 1.008","Tipo: Técnico <br>Curso: TÉCNICO EM COMÉRCIO <br>FEC: 1.008","Tipo: Técnico <br>Curso: TÉCNICO EM COMÉRCIO EXTERIOR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM CONDOMÍNIO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM CONTABILIDADE <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COOPERATIVISMO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM FINANÇAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM LOGÍSTICA <br>FEC: 1.005","Tipo: Técnico <br>Curso: TÉCNICO EM MARKETING <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM QUALIDADE <br>FEC: 1.002","Tipo: Técnico <br>Curso: TÉCNICO EM RECURSOS HUMANOS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SECRETARIADO <br>FEC: 1.014","Tipo: Técnico <br>Curso: TÉCNICO EM SEGUROS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SERVIÇOS DE CONDOMÍNIO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SERVIÇOS JURÍDICOS <br>FEC: 1.003","Tipo: Técnico <br>Curso: TÉCNICO EM SERVIÇOS PÚBLICOS <br>FEC: 1.003","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSAÇÕES IMOBILIÁRIAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM VENDAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COMPUTAÇÃO GRÁFICA <br>FEC: 1.194","Tipo: Técnico <br>Curso: TÉCNICO EM DESENVOLVIMENTO DE SISTEMAS <br>FEC: 1.05","Tipo: Técnico <br>Curso: TÉCNICO EM INFORMÁTICA <br>FEC: 1.053","Tipo: Técnico <br>Curso: TÉCNICO EM INFORMÁTICA PARA INTERNET <br>FEC: 1.028","Tipo: Técnico <br>Curso: TÉCNICO EM MANUTENÇÃO E SUPORTE EM INFORMÁTICA <br>FEC: 1.028","Tipo: Técnico <br>Curso: TÉCNICO EM PROGRAMAÇÃO DE JOGOS DIGITAIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM REDES DE COMPUTADORES <br>FEC: 1.032","Tipo: Técnico <br>Curso: TÉCNICO EM SISTEMAS DE COMPUTAÇÃO <br>FEC: 1.25","Tipo: Técnico <br>Curso: TÉCNICO EM SISTEMAS DE TRANSMISSÃO <br>FEC: 1.25","Tipo: Técnico <br>Curso: TÉCNICO EM TELECOMUNICAÇÕES <br>FEC: 1.083","Tipo: Técnico <br>Curso: TÉCNICO AEROPORTUÁRIO <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM AGRIMENSURA <br>FEC: 1.043","Tipo: Técnico <br>Curso: TÉCNICO EM CARPINTARIA <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM DESENHO DE CONSTRUÇÃO CIVIL <br>FEC: 1.066","Tipo: Técnico <br>Curso: TÉCNICO EM EDIFICAÇÕES <br>FEC: 1.068","Tipo: Técnico <br>Curso: TÉCNICO EM ESTRADAS <br>FEC: 1.01","Tipo: Técnico <br>Curso: TÉCNICO EM GEODÉSIA E CARTOGRAFIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM GEOPROCESSAMENTO <br>FEC: 1.213","Tipo: Técnico <br>Curso: TÉCNICO EM HIDROLOGIA <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM PORTOS <br>FEC: 1.017","Tipo: Técnico <br>Curso: TÉCNICO EM SANEAMENTO <br>FEC: 1.022","Tipo: Técnico <br>Curso: TÉCNICO EM TRÂNSITO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSPORTE AQUAVIÁRIO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSPORTE DE CARGAS <br>FEC: 1.075","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSPORTE DUTOVIÁRIO <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSPORTE METROFERROVIÁRIO <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM TRANSPORTE RODOVIÁRIO <br>FEC: 1.131","Tipo: Técnico <br>Curso: TÉCNICO EM AÇÕES DE COMANDOS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ARMAMENTO DE AERONAVES <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ARTILHARIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ARTILHARIA ANTIAÉREA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM BOMBEIRO AERONÁUTICO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM CAVALARIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COMBATE A INCÊNDIO, RESGATE E PREVEN... <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COMUNICAÇÕES AERONAUTICAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COMUNICAÇÕES NAVAIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM CONTROLE DE TRÁFEGO AÉREO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM DESENHO MILITAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ELETRICIDADE E INSTRUMENTOS AERONAUT... <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM EQUIPAMENTO DE ENGENHARIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM EQUIPAMENTOS DE VOO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ESTRUTURA E PINTURA DE AERONAVES <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM FORÇAS ESPECIAIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM FOTOINTELIGÊNCIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM GUARDA E SEGURANÇA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM HIDROGRAFIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM INFANTARIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM INFORMAÇÕES AERONÁUTICAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MANOBRAS E EQUIPAMENTOS DE CONVÉS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MATERIAL BÉLICO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MECÂNICA DE AERONAVES <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MERGULHO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM MONTANHISMO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM NAVEGAÇÃO FLUVIAL <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM OPERAÇÃO DE RADAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM OPERAÇÃO DE SONAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM OPERAÇÕES DE ENGENHARIA MILITAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM PREPARAÇÃO FÍSICA E DESPORTIVA MILITAR <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SENSORES DE AVIAÇÃO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SINAIS NAVAIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SINALIZAÇÃO NÁUTICA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SUPRIMENTO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM AGROINDÚSTRIA <br>FEC: 1.034","Tipo: Técnico <br>Curso: TÉCNICO EM ALIMENTOS <br>FEC: 1.094","Tipo: Técnico <br>Curso: TÉCNICO EM APICULTURA <br>FEC: 1.15","Tipo: Técnico <br>Curso: TÉCNICO EM CERVEJARIA <br>FEC: 1.299","Tipo: Técnico <br>Curso: TÉCNICO EM CONFEITARIA <br>FEC: 1.247","Tipo: Técnico <br>Curso: TÉCNICO EM PANIFICAÇÃO <br>FEC: 1.104","Tipo: Técnico <br>Curso: TÉCNICO EM PROCESSAMENTO DE PESCADO <br>FEC: 1.15","Tipo: Técnico <br>Curso: TÉCNICO EM VITICULTURA E ENOLOGIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO DE MODA E ESTILISMO <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM ARTE CIRCENSE <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM ARTE DRAMÁTICA <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM ARTES CIRCENSES <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM ARTES VISUAIS <br>FEC: 1.15","Tipo: Técnico <br>Curso: TÉCNICO EM ARTESANATO <br>FEC: 1.057","Tipo: Técnico <br>Curso: TÉCNICO EM CANTO <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM CENOGRAFIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COMPOSIÇÃO E ARRANJO <br>FEC: 1.25","Tipo: Técnico <br>Curso: TÉCNICO EM COMUNICAÇÃO VISUAL <br>FEC: 1.089","Tipo: Técnico <br>Curso: TÉCNICO EM CONSERVAÇÃO E RESTAURO <br>FEC: 1.15","Tipo: Técnico <br>Curso: TÉCNICO EM DANÇA <br>FEC: 1.48","Tipo: Técnico <br>Curso: TÉCNICO EM DESIGN DE CALÇADOS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM DESIGN DE EMBALAGENS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM DESIGN DE INTERIORES <br>FEC: 1.182","Tipo: Técnico <br>Curso: TÉCNICO EM DESIGN DE JOIAS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM DESIGN DE MÓVEIS <br>FEC: 1.008","Tipo: Técnico <br>Curso: TÉCNICO EM DOCUMENTAÇÃO MUSICAL <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM FABRICAÇÃO DE INSTRUMENTOS MUSICAIS <br>FEC: 1.25","Tipo: Técnico <br>Curso: TÉCNICO EM FIGURINO CÊNICO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM GESTÃO CULTURAL <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM INSTRUMENTO MUSICAL <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM MODELAGEM DO VESTUÁRIO <br>FEC: 1.06","Tipo: Técnico <br>Curso: TÉCNICO EM MULTIMÍDIA <br>FEC: 1.028","Tipo: Técnico <br>Curso: TÉCNICO EM MUSEOLOGIA <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM PAISAGISMO <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM PROCESSOS FONOGRÁFICOS <br>FEC: 1.259","Tipo: Técnico <br>Curso: TÉCNICO EM PROCESSOS FOTOGRÁFICOS <br>FEC: 1.15","Tipo: Técnico <br>Curso: TÉCNICO EM PRODUÇÃO DE ÁUDIO E VÍDEO <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM PRODUÇÃO DE MODA <br>FEC: 1.082","Tipo: Técnico <br>Curso: TÉCNICO EM PUBLICIDADE <br>FEC: 1.1","Tipo: Técnico <br>Curso: TÉCNICO EM RÁDIO E TELEVISÃO <br>FEC: 1.3","Tipo: Técnico <br>Curso: TÉCNICO EM REGÊNCIA <br>FEC: 1.5","Tipo: Técnico <br>Curso: TÉCNICO EM TEATRO <br>FEC: 1.083","Tipo: Técnico <br>Curso: TÉCNICO EM AÇÚCAR E ÁLCOOL <br>FEC: 1.175","Tipo: Técnico <br>Curso: TÉCNICO EM ANÁLISES QUÍMICAS <br>FEC: 1.197","Tipo: Técnico <br>Curso: TÉCNICO EM BIOCOMBUSTÍVEIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM CALÇADOS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM CELULOSE E PAPEL <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM CERÂMICA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM CONSTRUÇÃO NAVAL <br>FEC: 1.135","Tipo: Técnico <br>Curso: TÉCNICO EM CURTIMENTO <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM FABRICAÇÃO MECÂNICA <br>FEC: 1.214","Tipo: Técnico <br>Curso: TÉCNICO EM IMPRESSÃO OFFSET <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM IMPRESSÃO ROTOGRÁFICA E FLEXOGRÁFICA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM JOALHERIA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM MÓVEIS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM PETRÓLEO E GÁS <br>FEC: 1.03","Tipo: Técnico <br>Curso: TÉCNICO EM PETROQUÍMICA <br>FEC: 1.076","Tipo: Técnico <br>Curso: TÉCNICO EM PLÁSTICOS <br>FEC: 1.025","Tipo: Técnico <br>Curso: TÉCNICO EM PRÉ-IMPRESSÃO GRÁFICA <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM PROCESSOS GRÁFICOS <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM QUÍMICA <br>FEC: 1.109","Tipo: Técnico <br>Curso: TÉCNICO EM TÊXTIL <br>FEC: 1.27","Tipo: Técnico <br>Curso: TÉCNICO EM VESTUÁRIO <br>FEC: 1.018","Tipo: Técnico <br>Curso: TÉCNICO EM AGRICULTURA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM AGROECOLOGIA <br>FEC: 1.004","Tipo: Técnico <br>Curso: TÉCNICO EM AGRONEGÓCIO <br>FEC: 1.016","Tipo: Técnico <br>Curso: TÉCNICO EM AGROPECUÁRIA <br>FEC: 1.018","Tipo: Técnico <br>Curso: TÉCNICO EM AQUICULTURA <br>FEC: 1.01","Tipo: Técnico <br>Curso: TÉCNICO EM CAFEICULTURA <br>FEC: 1.253","Tipo: Técnico <br>Curso: TÉCNICO EM EQUIPAMENTOS PESQUEIROS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM FLORESTAS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM FRUTICULTURA <br>FEC: 1.188","Tipo: Técnico <br>Curso: TÉCNICO EM GEOLOGIA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM GRÃOS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM MINERAÇÃO <br>FEC: 1.073","Tipo: Técnico <br>Curso: TÉCNICO EM PESCA <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM PÓS-COLHEITA <br>FEC: 1.066","Tipo: Técnico <br>Curso: TÉCNICO EM RECURSOS MINERAIS <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM RECURSOS PESQUEIROS <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM ZOOTECNIA <br>FEC: 1.08","Tipo: Técnico <br>Curso: TÉCNICO EM DEFESA CIVIL <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM SEGURANÇA DO TRABALHO <br>FEC: 1.012","Tipo: Técnico <br>Curso: TÉCNICO EM AGENCIAMENTO DE VIAGEM <br>FEC: 1","Tipo: Técnico <br>Curso: TÉCNICO EM COZINHA <br>FEC: 1.095","Tipo: Técnico <br>Curso: TÉCNICO EM EVENTOS <br>FEC: 1.006","Tipo: Técnico <br>Curso: TÉCNICO EM GASTRONOMIA <br>FEC: 1.2","Tipo: Técnico <br>Curso: TÉCNICO EM GUIA DE TURISMO <br>FEC: 1.016","Tipo: Técnico <br>Curso: TÉCNICO EM HOSPEDAGEM <br>FEC: 1.019","Tipo: Técnico <br>Curso: TÉCNICO EM LAZER <br>FEC: 1.113","Tipo: Técnico <br>Curso: TÉCNICO EM RESTAURANTE E BAR <br>FEC: 1.058","Tipo: Técnico <br>Curso: TÉCNICO EM SERVIÇOS DE RESTAURANTE E BAR <br>FEC: 1.2"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,172,193,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Técnico","legendgroup":"Técnico","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1],"y":[7.04149861857295],"text":"Tipo: Especialização Técnica <br>Curso: TODOS <br>FEC: 1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,112,67,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Especialização Técnica","legendgroup":"Especialização Técnica","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1],"y":[7.9090481173247102],"text":"Tipo: Aperfeiçoamento Tecnológico <br>Curso: TODOS <br>FEC: 1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(120,144,156,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Aperfeiçoamento Tecnológico","legendgroup":"Aperfeiçoamento Tecnológico","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.5,1,1.2,1.1799999999999999,1.2,1,1.006,1.2,1.143,1.1539999999999999,1,1.3600000000000001,1.0880000000000001,1,1.23,1.5,1.23,1,1.27,1.0309999999999999,1.0309999999999999,1.23,1,1,1,1,1,1,1,1,1,1,1,1,1,1.0169999999999999,1,1.03,1.25,1,1.25,1,1.0760000000000001,1.25,1.25,1.0309999999999999,1.0760000000000001,1.0760000000000001,1.2,1.0049999999999999,1.0049999999999999,1.032,1.032,1.1000000000000001,1,1.2,1.3,1.1000000000000001,1.1000000000000001,1.1000000000000001,1,1,1,1,1,1,1,1.0489999999999999,1.0489999999999999,1.1499999999999999,1,1.0169999999999999,1.3,1,1.1499999999999999,1.1499999999999999,1.0780000000000001,1.0780000000000001,1.0780000000000001,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.1499999999999999,1.101,1,1,1.23,1.23,1,1.23,1.23,1.23,1,1.23,1.23,1.23,1.23,1.23,1.23,1.0029999999999999,1.02,1,1,1,1.2,1,1.03,1.2,1.2,1.2,1.2,1.1100000000000001,1.0489999999999999,1.1100000000000001,1,1.1100000000000001,1,1,1.024,1,1.028],"y":[8.9669911037199199,8.8471211075782783,9.1880568915978067,9.1098915770649906,8.9723930681124333,8.8688878503628068,9.1805847774259739,8.9116521053016182,9.1959226953797035,8.9234863589517772,9.0098526459187269,8.8054497339762747,9.1417874408885833,8.8914072489365932,9.1856146870180968,9.1345483510754999,8.8996579745784405,9.088425564486533,9.0551311247982085,9.0281270357780166,9.0997466639615592,9.1604701749980446,9.0117524435743697,8.8439135521650307,9.058138083387167,9.0452531500719484,9.1675462805666026,8.9632185541093357,8.8780639952979978,9.0431442819535732,9.0669467390514917,9.0214036557823416,9.1729688279330723,9.0209819185547531,8.9282601621001962,8.8039992892183356,9.1852401023730632,8.8576282825320956,9.1930203450843688,8.8001216699369245,8.9976598982699212,8.8181813114322729,8.8134171565063291,8.8712908633984622,9.1458369413390752,9.1011570493690677,8.819933361560107,9.1823739968240261,9.0114372021518641,9.0156926949508485,9.0168452288955443,9.107633212860673,8.8849675336852663,8.8824687439017005,8.9412675486877564,9.0099347296170897,8.8739333163946874,8.8256439545191832,9.1883180242031806,9.0347504004836079,8.9808348646387461,8.8980568366125219,8.8624758666381247,9.1424790004268282,9.1873782046139247,8.9233333573676639,9.1941620388999574,9.1294105807319283,8.9350478406064209,8.8392113619484007,9.1217900687828664,9.054071101360023,9.1636268440634012,9.1928142379038036,9.123842095211149,8.8283339439891275,8.9070262327790264,8.8862408827058967,8.9372983843088143,8.9787004671990864,9.0811902727000415,8.9609275379218154,9.0792922723107043,8.8758504899218682,8.9250713742338128,9.0818788967095312,8.8981133087538176,9.1062398120760921,8.9028654808178551,8.939029329456389,8.9713680907152593,9.1117521571926776,9.0850371451117091,8.9960259991697971,8.8360358213074512,8.9018132430501282,9.1915384721942246,8.908930838573724,9.0995274810120463,9.0105327189899977,8.9250908001326028,8.9512877691537138,8.9504840385168798,8.8868929146789011,8.992989013064653,9.0290787246078246,9.1946024161763482,9.0026136525906626,9.1967073999345299,9.008853799384088,9.0877286792732779,9.0837423994205899,9.1273350183852013,8.8967138466425233,9.0219107825309042,9.1584181493148211,8.9540276868268851,9.078135437797755,9.0447046154178672,8.8420102263800793,9.0712093598209318,9.1540373899042606],"text":["Tipo: Tecnologia <br>Curso: ESTÉTICA E COSMÉTICA <br>FEC: 1.5","Tipo: Tecnologia <br>Curso: GESTÃO AMBIENTAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DE RESÍDUOS SÓLIDOS <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: GESTÃO HOSPITALAR <br>FEC: 1.18","Tipo: Tecnologia <br>Curso: OFTÁLMICA <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: RADIOLOGIA <br>FEC: 1","Tipo: Tecnologia <br>Curso: SANEAMENTO AMBIENTAL <br>FEC: 1.006","Tipo: Tecnologia <br>Curso: SISTEMAS BIOMÉDICOS <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: AUTOMAÇÃO INDUSTRIAL <br>FEC: 1.143","Tipo: Tecnologia <br>Curso: ELETRÔNICA INDUSTRIAL <br>FEC: 1.154","Tipo: Tecnologia <br>Curso: ELETROTÉCNICA INDUSTRIAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DA PRODUÇÃO INDUSTRIAL <br>FEC: 1.36","Tipo: Tecnologia <br>Curso: MANUTENÇÃO DE AERONAVES <br>FEC: 1.088","Tipo: Tecnologia <br>Curso: MANUTENÇÃO INDUSTRIAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: MECÂNICA DE PRECISÃO <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: MECATRÔNICA INDUSTRIAL <br>FEC: 1.5","Tipo: Tecnologia <br>Curso: PROCESSOS AMBIENTAIS <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PROCESSOS METALÚRGICOS <br>FEC: 1","Tipo: Tecnologia <br>Curso: REFRIGERAÇÃO E CLIMATIZAÇÃO <br>FEC: 1.27","Tipo: Tecnologia <br>Curso: SISTEMAS DE ENERGIA <br>FEC: 1.031","Tipo: Tecnologia <br>Curso: SISTEMAS ELÉTRICOS <br>FEC: 1.031","Tipo: Tecnologia <br>Curso: SISTEMAS ELETRÔNICOS <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: DESENVOLVIMENTO SOCIAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: PROCESSOS ESCOLARES <br>FEC: 1","Tipo: Tecnologia <br>Curso: COMÉRCIO EXTERIOR <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO COMERCIAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DA QUALIDADE <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DE COOPERATIVAS <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DE RECURSOS HUMANOS <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO EMPREENDEDORA <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO FINANCEIRA <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO PÚBLICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: LOGÍSTICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: MARKETING <br>FEC: 1","Tipo: Tecnologia <br>Curso: NEGÓCIOS IMOBILIÁRIOS <br>FEC: 1","Tipo: Tecnologia <br>Curso: PROCESSOS GERENCIAIS <br>FEC: 1.017","Tipo: Tecnologia <br>Curso: SECRETARIADO <br>FEC: 1","Tipo: Tecnologia <br>Curso: ANÁLISE E DESENVOLVIMENTO DE SISTEMAS <br>FEC: 1.03","Tipo: Tecnologia <br>Curso: BANCO DE DADOS <br>FEC: 1.25","Tipo: Tecnologia <br>Curso: GESTÃO DA TECNOLOGIA DA INFORMAÇÃO <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DE TELECOMUNICAÇÕES <br>FEC: 1.25","Tipo: Tecnologia <br>Curso: JOGOS DIGITAIS <br>FEC: 1","Tipo: Tecnologia <br>Curso: REDES DE COMPUTADORES <br>FEC: 1.076","Tipo: Tecnologia <br>Curso: REDES DE TELECOMUNICAÇÕES <br>FEC: 1.25","Tipo: Tecnologia <br>Curso: SEGURANÇA DA INFORMAÇÃO <br>FEC: 1.25","Tipo: Tecnologia <br>Curso: SISTEMAS DE TELECOMUNICAÇÕES <br>FEC: 1.031","Tipo: Tecnologia <br>Curso: SISTEMAS PARA INTERNET <br>FEC: 1.076","Tipo: Tecnologia <br>Curso: TELEMÁTICA <br>FEC: 1.076","Tipo: Tecnologia <br>Curso: AGRIMENSURA <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: CONSTRUÇÃO DE EDIFÍCIOS <br>FEC: 1.005","Tipo: Tecnologia <br>Curso: CONTROLE DE OBRAS <br>FEC: 1.005","Tipo: Tecnologia <br>Curso: ESTRADAS <br>FEC: 1.032","Tipo: Tecnologia <br>Curso: GEOPROCESSAMENTO <br>FEC: 1.032","Tipo: Tecnologia <br>Curso: GESTÃO PORTUÁRIA <br>FEC: 1.1","Tipo: Tecnologia <br>Curso: MATERIAL DE CONSTRUÇÃO <br>FEC: 1","Tipo: Tecnologia <br>Curso: OBRAS HIDRÁULICAS <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: PILOTAGEM PROFISSIONAL DE AERONAVES <br>FEC: 1.3","Tipo: Tecnologia <br>Curso: SISTEMAS DE NAVEGAÇÃO FLUVIAL <br>FEC: 1.1","Tipo: Tecnologia <br>Curso: TRANSPORTE AÉREO <br>FEC: 1.1","Tipo: Tecnologia <br>Curso: TRANSPORTE TERRESTRE <br>FEC: 1.1","Tipo: Tecnologia <br>Curso: COMUNICAÇÕES AERONÁUTICAS <br>FEC: 1","Tipo: Tecnologia <br>Curso: FOTOINTELIGÊNCIA <br>FEC: 1","Tipo: Tecnologia <br>Curso: GERENCIAMENTO DE TRÁFEGO AÉREO <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO E MANUTENÇÃO AERONÁUTICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: METEOROLOGIA AERONÁUTICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: SISTEMAS DE ARMAS <br>FEC: 1","Tipo: Tecnologia <br>Curso: AGROINDÚSTRIA <br>FEC: 1","Tipo: Tecnologia <br>Curso: ALIMENTOS <br>FEC: 1.049","Tipo: Tecnologia <br>Curso: LATICÍNIOS <br>FEC: 1.049","Tipo: Tecnologia <br>Curso: PROCESSAMENTO DE CARNES <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO DE CACHAÇA <br>FEC: 1","Tipo: Tecnologia <br>Curso: VITICULTURA E ENOLOGIA <br>FEC: 1.017","Tipo: Tecnologia <br>Curso: COMUNICAÇÃO ASSISTIVA <br>FEC: 1.3","Tipo: Tecnologia <br>Curso: COMUNICAÇÃO INSTITUCIONAL <br>FEC: 1","Tipo: Tecnologia <br>Curso: CONSERVAÇÃO E RESTAURO <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: DESIGN DE INTERIORES <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: DESIGN DE MODA <br>FEC: 1.078","Tipo: Tecnologia <br>Curso: DESIGN DE PRODUTO <br>FEC: 1.078","Tipo: Tecnologia <br>Curso: DESIGN GRÁFICO <br>FEC: 1.078","Tipo: Tecnologia <br>Curso: FOTOGRAFIA <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO AUDIOVISUAL <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO CÊNICA <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO CULTURAL <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO FONOGRÁFICA <br>FEC: 1.15","Tipo: Tecnologia <br>Curso: PRODUÇÃO MULTIMÍDIA <br>FEC: 1.101","Tipo: Tecnologia <br>Curso: PRODUÇÃO PUBLICITÁRIA <br>FEC: 1","Tipo: Tecnologia <br>Curso: BIOCOMBUSTÍVEIS <br>FEC: 1","Tipo: Tecnologia <br>Curso: BIOTECNOLOGIA <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: CONSTRUÇÃO NAVAL <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: FABRICAÇÃO MECÂNICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: PAPEL E CELULOSE <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PETRÓLEO E GÁS <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: POLÍMEROS <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PROCESSOS QUÍMICOS <br>FEC: 1","Tipo: Tecnologia <br>Curso: PRODUÇÃO DE VESTUÁRIO <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PRODUÇÃO GRÁFICA <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PRODUÇÃO JOALHEIRA <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PRODUÇÃO MOVELEIRA <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PRODUÇÃO SUCROALCOOLEIRA <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: PRODUÇÃO TÊXTIL <br>FEC: 1.23","Tipo: Tecnologia <br>Curso: AGROECOLOGIA <br>FEC: 1.003","Tipo: Tecnologia <br>Curso: AGRONEGÓCIO <br>FEC: 1.02","Tipo: Tecnologia <br>Curso: AQUICULTURA <br>FEC: 1","Tipo: Tecnologia <br>Curso: CAFEICULTURA <br>FEC: 1","Tipo: Tecnologia <br>Curso: HORTICULTURA <br>FEC: 1","Tipo: Tecnologia <br>Curso: IRRIGAÇÃO E DRENAGEM <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: MINERAÇÃO <br>FEC: 1","Tipo: Tecnologia <br>Curso: PRODUÇÃO DE GRÃOS <br>FEC: 1.03","Tipo: Tecnologia <br>Curso: PRODUÇÃO PESQUEIRA <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: PRODUÇÃO SUCRO ALCOOLEIRA <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: ROCHAS ORNAMENTAIS <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: SILVICULTURA <br>FEC: 1.2","Tipo: Tecnologia <br>Curso: GESTÃO DE SEGURANÇA PRIVADA <br>FEC: 1.11","Tipo: Tecnologia <br>Curso: SEGURANÇA NO TRABALHO <br>FEC: 1.049","Tipo: Tecnologia <br>Curso: SEGURANÇA NO TRÂNSITO <br>FEC: 1.11","Tipo: Tecnologia <br>Curso: SEGURANÇA PÚBLICA <br>FEC: 1","Tipo: Tecnologia <br>Curso: SERVIÇOS PENAIS <br>FEC: 1.11","Tipo: Tecnologia <br>Curso: EVENTOS <br>FEC: 1","Tipo: Tecnologia <br>Curso: GASTRONOMIA <br>FEC: 1","Tipo: Tecnologia <br>Curso: GESTÃO DE TURISMO <br>FEC: 1.024","Tipo: Tecnologia <br>Curso: GESTÃO DESPORTIVA E DE LAZER <br>FEC: 1","Tipo: Tecnologia <br>Curso: HOTELARIA <br>FEC: 1.028"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(94,53,177,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Tecnologia","legendgroup":"Tecnologia","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.1000000000000001,1.2390000000000001,1.115,1.052,1,1.127,1,1.137,1,1.038,1,1.0389999999999999,1.0289999999999999,1,1,1,1.024,1.024,1.024,1.175,1.0129999999999999,1.107,1.0640000000000001,1.1200000000000001,1.077,1.079],"y":[10.125769430026413,10.087849239818752,9.9873721535317603,10.10403935778886,10.174574282579124,9.8850498608313497,10.146029079612344,9.9278611991554495,10.054302357882261,9.9562439741566777,10.142058530822396,9.9959716915152974,10.064370961021632,9.9256583343259983,9.8482402243651457,10.146426186431199,10.146249640546738,9.9533217553049322,9.9974755996838205,9.9810089709237211,9.8435200388543311,9.9826809678226702,10.182589280512184,9.8687461401335899,9.8377180590294309,10.178821986541152],"text":["Tipo: Licenciatura <br>Curso: ARTES CÊNICAS <br>FEC: 1.1","Tipo: Licenciatura <br>Curso: ARTES VISUAIS <br>FEC: 1.239","Tipo: Licenciatura <br>Curso: CIÊNCIAS AGRÁRIAS <br>FEC: 1.115","Tipo: Licenciatura <br>Curso: CIÊNCIAS BIOLÓGICAS <br>FEC: 1.052","Tipo: Licenciatura <br>Curso: CIÊNCIAS DA NATUREZA <br>FEC: 1","Tipo: Licenciatura <br>Curso: CIÊNCIAS SOCIAIS <br>FEC: 1.127","Tipo: Licenciatura <br>Curso: COMPUTAÇÃO <br>FEC: 1","Tipo: Licenciatura <br>Curso: DANÇA <br>FEC: 1.137","Tipo: Licenciatura <br>Curso: EDUCAÇÃO DO CAMPO <br>FEC: 1","Tipo: Licenciatura <br>Curso: EDUCAÇÃO FÍSICA <br>FEC: 1.038","Tipo: Licenciatura <br>Curso: FILOSOFIA <br>FEC: 1","Tipo: Licenciatura <br>Curso: FÍSICA <br>FEC: 1.039","Tipo: Licenciatura <br>Curso: GEOGRAFIA <br>FEC: 1.029","Tipo: Licenciatura <br>Curso: HISTÓRIA <br>FEC: 1","Tipo: Licenciatura <br>Curso: INFORMÁTICA <br>FEC: 1","Tipo: Licenciatura <br>Curso: INTERCULTURAL INDÍGENA <br>FEC: 1","Tipo: Licenciatura <br>Curso: LETRAS <br>FEC: 1.024","Tipo: Licenciatura <br>Curso: LETRAS - LÍNGUA ESTRANGEIRA <br>FEC: 1.024","Tipo: Licenciatura <br>Curso: LETRAS - LÍNGUA PORTUGUESA <br>FEC: 1.024","Tipo: Licenciatura <br>Curso: LICENCIATURA PARA A EDUCAÇÃO PROFISSIONAL, CIEN... <br>FEC: 1.175","Tipo: Licenciatura <br>Curso: MATEMÁTICA <br>FEC: 1.013","Tipo: Licenciatura <br>Curso: MÚSICA <br>FEC: 1.107","Tipo: Licenciatura <br>Curso: PEDAGOGIA <br>FEC: 1.064","Tipo: Licenciatura <br>Curso: PROGRAMA ESPECIAL DE FORMAÇÃO PEDAGÓGICA DE DOC... <br>FEC: 1.12","Tipo: Licenciatura <br>Curso: QUÍMICA <br>FEC: 1.077","Tipo: Licenciatura <br>Curso: TEATRO <br>FEC: 1.079"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(236,64,122,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Licenciatura","legendgroup":"Licenciatura","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1.2,1.2490000000000001,1.5,1.0249999999999999,1.1499999999999999,1.2,1.2,1.1000000000000001,1.3,1.2,1.2509999999999999,1.3,1,1,1.23,1.23,1.1599999999999999,1.2889999999999999,1.137,1.028,1.1080000000000001,1.1080000000000001,1.0780000000000001,1.1779999999999999,1.0329999999999999,1.1000000000000001,1,1.1000000000000001,1,1,1.2,1,1,1.034,1.1000000000000001,1,1,1,1,1,1,1.1000000000000001,1,1.5,1.1000000000000001,1,1.0009999999999999,1,1,1,1.1870000000000001,1.111,1,1,1.081,1.2370000000000001,1,1.1870000000000001,1.1000000000000001,1,1.1000000000000001,1.008,1.071,1.085,1.117,1.085,1.2110000000000001,1.0760000000000001,1.0129999999999999,1.2689999999999999,1.5,1,1.1000000000000001,1,1.23,1.23,1.23,1.111,1.23,1.3180000000000001,1.022,1.0609999999999999,1.026,1,1.052,1,1.137,1.137,1,1.0349999999999999,1.0369999999999999,1.0369999999999999,1.0449999999999999,1.069],"y":[10.806550611089914,10.865949033014477,10.990433316957205,11.009789481200277,10.869537661317736,10.864491124358029,10.961613669060171,10.902411658689379,11.199273402243852,11.003136932756751,11.068844782561063,11.160067642945796,11.011415956914425,11.169375271163881,10.870930473227054,11.182130121067166,10.891440368536859,10.822755091451109,11.173627136647701,11.177300589159131,11.008250125683844,10.881668798532337,10.953919601812959,10.849847552739083,11.168270108476282,10.96570826144889,10.808365990407765,11.16538198525086,11.036508535128087,10.828083242941648,11.023592865187675,10.832174714747817,11.165476167481392,10.943375910166651,10.806922112498432,11.117080472782254,10.92754780612886,11.157973251584917,10.961125374399126,10.860949418041855,10.844366729259491,11.013838948775083,11.038124741613865,10.831063013058156,11.001612319052219,11.173714948538692,10.935400607064366,11.110241408925503,11.039390715304762,11.12173548815772,11.177607285231351,11.174159517697991,10.808468350861222,10.830726650822907,10.979096623696387,11.063223464041949,11.020687433239072,10.917434815596788,10.865354747138918,11.169308664556592,11.179598484933376,11.078005989082158,11.083429045788943,10.816185527853667,11.11565039474517,11.12624785657972,11.182309855613857,11.134171639289708,11.005093651823699,10.954233252629638,11.144109769631177,11.179131269454956,10.879678975977004,10.99799711331725,11.069523718673736,11.195742915943265,11.113709345459938,10.966046303138137,10.88899202030152,10.956762023176998,10.966795706190169,10.935695862304419,11.102376893162727,11.097728181723506,10.892836472112686,10.878657047543674,10.864409277960657,11.091949972417206,11.033855219744146,11.138023079931736,11.089396133832633,10.809572847932577,10.87999943876639,10.958951283618807],"text":["Tipo: Bacharelado <br>Curso: BIOMEDICINA <br>FEC: 1.2","Tipo: Bacharelado <br>Curso: EDUCAÇÃO FÍSICA <br>FEC: 1.249","Tipo: Bacharelado <br>Curso: ENFERMAGEM <br>FEC: 1.5","Tipo: Bacharelado <br>Curso: ENGENHARIA AMBIENTAL <br>FEC: 1.025","Tipo: Bacharelado <br>Curso: FARMÁCIA <br>FEC: 1.15","Tipo: Bacharelado <br>Curso: FISIOTERAPIA <br>FEC: 1.2","Tipo: Bacharelado <br>Curso: FONOAUDIOLOGIA <br>FEC: 1.2","Tipo: Bacharelado <br>Curso: GESTÃO AMBIENTAL <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: MEDICINA <br>FEC: 1.3","Tipo: Bacharelado <br>Curso: METEOROLOGIA <br>FEC: 1.2","Tipo: Bacharelado <br>Curso: NUTRIÇÃO <br>FEC: 1.251","Tipo: Bacharelado <br>Curso: ODONTOLOGIA <br>FEC: 1.3","Tipo: Bacharelado <br>Curso: PSICOLOGIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: TERAPIA OCUPACIONAL <br>FEC: 1","Tipo: Bacharelado <br>Curso: CIÊNCIAS AERONÁUTICAS <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: ENGENHARIA AERONÁUTICA <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: ENGENHARIA DE AUTOMAÇÃO INDUSTRIAL <br>FEC: 1.16","Tipo: Bacharelado <br>Curso: ENGENHARIA DE CONTROLE E AUTOMAÇÃO <br>FEC: 1.289","Tipo: Bacharelado <br>Curso: ENGENHARIA DE MATERIAIS <br>FEC: 1.137","Tipo: Bacharelado <br>Curso: ENGENHARIA DE PRODUÇÃO <br>FEC: 1.028","Tipo: Bacharelado <br>Curso: ENGENHARIA ELÉTRICA <br>FEC: 1.108","Tipo: Bacharelado <br>Curso: ENGENHARIA ELETRÔNICA <br>FEC: 1.108","Tipo: Bacharelado <br>Curso: ENGENHARIA MECÂNICA <br>FEC: 1.078","Tipo: Bacharelado <br>Curso: ENGENHARIA MECATRÔNICA <br>FEC: 1.178","Tipo: Bacharelado <br>Curso: ENGENHARIA METALÚRGICA <br>FEC: 1.033","Tipo: Bacharelado <br>Curso: ARQUEOLOGIA <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: ARQUIVOLOGIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ARTES VISUAIS <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: BIBLIOTECONOMIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: CIÊNCIAS SOCIAIS <br>FEC: 1","Tipo: Bacharelado <br>Curso: DANÇA <br>FEC: 1.2","Tipo: Bacharelado <br>Curso: ESTATÍSTICA <br>FEC: 1","Tipo: Bacharelado <br>Curso: FILOSOFIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: FÍSICA <br>FEC: 1.034","Tipo: Bacharelado <br>Curso: GEOGRAFIA <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: HISTÓRIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: LETRAS <br>FEC: 1","Tipo: Bacharelado <br>Curso: LETRAS - LÍNGUA ESTRANGEIRA <br>FEC: 1","Tipo: Bacharelado <br>Curso: LETRAS - LÍNGUA PORTUGUESA <br>FEC: 1","Tipo: Bacharelado <br>Curso: MATEMÁTICA <br>FEC: 1","Tipo: Bacharelado <br>Curso: MUSEOLOGIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: MÚSICA <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: RELAÇÕES PÚBLICAS <br>FEC: 1","Tipo: Bacharelado <br>Curso: SERVIÇO SOCIAL <br>FEC: 1.5","Tipo: Bacharelado <br>Curso: TEATRO <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: TEOLOGIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ADMINISTRAÇÃO <br>FEC: 1.001","Tipo: Bacharelado <br>Curso: CIÊNCIAS ATUARIAIS <br>FEC: 1","Tipo: Bacharelado <br>Curso: CIÊNCIAS CONTÁBEIS <br>FEC: 1","Tipo: Bacharelado <br>Curso: CIÊNCIAS ECONÔMICAS <br>FEC: 1","Tipo: Bacharelado <br>Curso: DIREITO <br>FEC: 1.187","Tipo: Bacharelado <br>Curso: LÍNGUAS ESTRANGEIRAS APLICADAS A NEGOCIAÇÕES IN... <br>FEC: 1.111","Tipo: Bacharelado <br>Curso: RELAÇÕES INTERNACIONAIS <br>FEC: 1","Tipo: Bacharelado <br>Curso: SECRETARIADO EXECUTIVO <br>FEC: 1","Tipo: Bacharelado <br>Curso: CIÊNCIA DA COMPUTAÇÃO <br>FEC: 1.081","Tipo: Bacharelado <br>Curso: ENGENHARIA DE COMPUTAÇÃO <br>FEC: 1.237","Tipo: Bacharelado <br>Curso: ENGENHARIA DE SOFTWARE <br>FEC: 1","Tipo: Bacharelado <br>Curso: ENGENHARIA DE TELECOMUNICAÇÕES <br>FEC: 1.187","Tipo: Bacharelado <br>Curso: INFORMÁTICA <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: JORNALISMO <br>FEC: 1","Tipo: Bacharelado <br>Curso: RADIO, TV E INTERNET <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: SISTEMAS DE INFORMAÇÃO <br>FEC: 1.008","Tipo: Bacharelado <br>Curso: ARQUITETURA E URBANISMO <br>FEC: 1.071","Tipo: Bacharelado <br>Curso: ENGENHARIA CIVIL <br>FEC: 1.085","Tipo: Bacharelado <br>Curso: ENGENHARIA DE AGRIMENSURA E CARTOGRÁFICA <br>FEC: 1.117","Tipo: Bacharelado <br>Curso: ENGENHARIA DE PRODUÇÃO CIVIL <br>FEC: 1.085","Tipo: Bacharelado <br>Curso: ENGENHARIA DE TRANSPORTES <br>FEC: 1.211","Tipo: Bacharelado <br>Curso: CIÊNCIA E TECNOLOGIA DE ALIMENTOS <br>FEC: 1.076","Tipo: Bacharelado <br>Curso: ENGENHARIA DE ALIMENTOS <br>FEC: 1.013","Tipo: Bacharelado <br>Curso: CINEMA E AUDIOVISUAL <br>FEC: 1.269","Tipo: Bacharelado <br>Curso: DESIGN <br>FEC: 1.5","Tipo: Bacharelado <br>Curso: PRODUÇÃO CULTURAL <br>FEC: 1","Tipo: Bacharelado <br>Curso: PUBLICIDADE E PROPAGANDA <br>FEC: 1.1","Tipo: Bacharelado <br>Curso: BIOTECNOLOGIA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ENGENHARIA DE BIOPROCESSOS <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: ENGENHARIA DE PETRÓLEO <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: ENGENHARIA NAVAL <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: ENGENHARIA QUÍMICA <br>FEC: 1.111","Tipo: Bacharelado <br>Curso: ENGENHARIA TÊXTIL <br>FEC: 1.23","Tipo: Bacharelado <br>Curso: QUÍMICA <br>FEC: 1.318","Tipo: Bacharelado <br>Curso: AGROECOLOGIA <br>FEC: 1.022","Tipo: Bacharelado <br>Curso: AGRONOMIA <br>FEC: 1.061","Tipo: Bacharelado <br>Curso: CIÊNCIAS BIOLÓGICAS <br>FEC: 1.026","Tipo: Bacharelado <br>Curso: ENGENHARIA AGRÍCOLA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ENGENHARIA AGRONÔMICA <br>FEC: 1.052","Tipo: Bacharelado <br>Curso: ENGENHARIA DE AQUICULTURA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ENGENHARIA DE ENERGIAS RENOVÁVEIS <br>FEC: 1.137","Tipo: Bacharelado <br>Curso: ENGENHARIA DE MINAS <br>FEC: 1.137","Tipo: Bacharelado <br>Curso: ENGENHARIA DE PESCA <br>FEC: 1","Tipo: Bacharelado <br>Curso: ENGENHARIA FLORESTAL <br>FEC: 1.035","Tipo: Bacharelado <br>Curso: GEOLOGIA <br>FEC: 1.037","Tipo: Bacharelado <br>Curso: MEDICINA VETERINÁRIA <br>FEC: 1.037","Tipo: Bacharelado <br>Curso: ZOOTECNIA <br>FEC: 1.045","Tipo: Bacharelado <br>Curso: TURISMO <br>FEC: 1.069"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(57,73,171,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Bacharelado","legendgroup":"Bacharelado","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1],"y":[11.909210492391139],"text":"Tipo: Especialização Lato/Prof Tec <br>Curso: TODOS <br>FEC: 1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(102,187,106,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Especialização Lato/Prof Tec","legendgroup":"Especialização Lato/Prof Tec","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1],"y":[13.170406204275787],"text":"Tipo: Mestrado <br>Curso: TODOS <br>FEC: 1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(156,204,101,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Mestrado","legendgroup":"Mestrado","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1],"y":[14.174078765418381],"text":"Tipo: Doutorado <br>Curso: TODOS <br>FEC: 1","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,238,88,1)","opacity":0.29999999999999999,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)"}},"hoveron":"points","name":"Doutorado","legendgroup":"Doutorado","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":59.552525025689185,"r":26.567040265670411,"b":75.100885341172798,"l":250.72644250726449},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"'Open Sans', sans-serif","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.94499999999999995,2.1550000000000002],"tickmode":"array","ticktext":["1.0","1.2","1.4","1.6","1.8","2.0"],"tickvals":[1,1.2000000000000002,1.4000000000000001,1.6000000000000001,1.8,2],"categoryorder":"array","categoryarray":["1.0","1.2","1.4","1.6","1.8","2.0"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"'Open Sans', sans-serif","size":13.283520132835205},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(217,217,217,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"<b> Fator de Esforço de Curso (FEC) <\/b>","font":{"color":"rgba(0,0,0,1)","family":"'Open Sans', sans-serif","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,14.6],"tickmode":"array","ticktext":["Educação Infantil","Ensino Fundamental I","Ensino Fundamental Ii","Ensino Médio","Qualificação Profissional (FIC)","Técnico","Especialização Técnica","Aperfeiçoamento Tecnológico","Tecnologia","Licenciatura","Bacharelado","Especialização Lato/Prof Tec","Mestrado","Doutorado"],"tickvals":[1,2,3,3.9999999999999996,5,6,7,7.9999999999999991,9,10,11,12,13,14],"categoryorder":"array","categoryarray":["Educação Infantil","Ensino Fundamental I","Ensino Fundamental Ii","Ensino Médio","Qualificação Profissional (FIC)","Técnico","Especialização Técnica","Aperfeiçoamento Tecnológico","Tecnologia","Licenciatura","Bacharelado","Especialização Lato/Prof Tec","Mestrado","Doutorado"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"'Open Sans', sans-serif","size":13.283520132835205},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"<b> Tipo de Curso <\/b>","font":{"color":"rgba(0,0,0,1)","family":"'Open Sans', sans-serif","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"opensans","size":11.68949771689498}},"hovermode":"closest","width":1000,"height":610,"barmode":"relative","title":{"font":{"family":"'Open Sans', sans-serif"}}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"2a281a236fb0":{"x":{},"y":{},"fill":{},"text":{},"type":"box"},"2a28756a3c4a":{"x":{},"y":{},"fill":{},"text":{}}},"cur_data":"2a281a236fb0","visdat":{"2a281a236fb0":["function (y) ","x"],"2a28756a3c4a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</section>
+<section id="section-1" class="slide level2" style="overflow-y: hidden !important;" data-background-iframe="www/regras_de_consistencia.pdf" data-background-interactive="True">
+<h2></h2>
+</section>
+<section id="ficha-técnica" class="slide level2">
+<h2>Ficha Técnica</h2>
+
+<img data-src="www/tecnicos.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="ficha-técnica-1" class="slide level2">
+<h2>Ficha Técnica</h2>
+
+<img data-src="www/professor.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="ficha-técnica-2" class="slide level2">
+<h2>Ficha Técnica</h2>
+
+<img data-src="www/eja.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="ficha-técnica-3" class="slide level2">
+<h2>Ficha Técnica</h2>
+
+<img data-src="www/rap.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="ficha-técnica-4" class="slide level2">
+<h2>Ficha Técnica</h2>
+
+<img data-src="www/eficiencia.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-2" class="slide level2" data-background-iframe="https://morais14.github.io/IFB_PNP/" data-background-interactive="True">
+<h2></h2>
+</section>
+<section id="section-3" class="slide level2" data-background-iframe="https://ifbdata.ifb.edu.br/" data-background-interactive="True">
+<h2></h2>
+</section>
+<section id="muito-obrigado" class="slide level2">
+<h2>Muito obrigado!</h2>
+
+<img data-src="www/grafico_animado.svg" class="quarto-figure quarto-figure-center r-stretch"><p>Contato: cgpl@ifb.edu.br</p>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="apresentacao_indicadores_orcamento_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease-in-out",
+'autoAnimateDuration': 3000,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiada");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiada");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

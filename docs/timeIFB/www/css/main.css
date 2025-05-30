@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin-top: 0;
+ }
+
+#timeline-embed {
+  height: 98vh;
+  max-height: 98vh;
+}
+
+#wmv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 100px;
+  overflow: hidden;
+}
+
+iframe {
+  border: none;
+}
